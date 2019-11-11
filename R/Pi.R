@@ -1,4 +1,25 @@
-library(tidyverse)
+
+devtools::document()
+#' @title Montecarlo estimation of Pi and its own Plot function
+#'
+#' @description Compute an approximation of Pi by Monte-Carlo integration using
+#' uniform sampling and Plot its result
+#' @param B A \code{numeric} (integer) used to denote the number of simulations.
+#' @param seed A \code{numeric} (integer) used to control the seed of the random number
+#' generator used by this function.
+#' @return A \code{list} containing the following attributes:
+#' \describe{
+#'      \item{estimated_pi}{Estimated value of Pi}
+#'      \item{points}{Data frame with 3 variables used to plot the area of the estimated Pi}
+#' }
+#' @authors Rebecca, Emily, Edvard, Ferdinando & Niels
+#' @importFrom stats runif tidyverse
+#' @export
+#' @examples
+#'estimate_pi(B = 10^4, seed = 123)
+#' plot(estimate_pi(B = 10^4, seed = 123))
+
+
 #Problem 0: modify find_pi from Homework #3
 
 ###Estimate_pi function
