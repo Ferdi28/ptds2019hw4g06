@@ -7,13 +7,13 @@
 estimate_pi(B = 5000, seed = 10)
 }
 \arguments{
-\item{B}{A \code{numeric} (integer) used to denote the number of simulations.}
+\item{B}{A  \code{numeric} (integer) used to denote the number of simulations.}
 
 \item{seed}{A \code{numeric} (integer) used to control the seed of the random number
 generator used by this function.}
 }
 \value{
-A \code{list} containing the following attributes:
+A  \code{list} containing the following attributes:
 \describe{
      \item{estimated_pi}{Estimated value of Pi}
      \item{points}{Data frame with 3 variables used to plot the area of the estimated Pi}
@@ -24,6 +24,6 @@ Compute an approximation of Pi by Monte-Carlo integration using
 uniform sampling and Plot its result
 }
 \examples{
-estimate_pi(B = 10^4, seed = 123)
-plot(estimate_pi(B = 10^4, seed = 123))
+estimate_pi()
+plot(estimate_pi())
 }
