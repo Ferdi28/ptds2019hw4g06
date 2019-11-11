@@ -11,7 +11,8 @@
 #'      \item{estimated_pi}{Estimated value of Pi}
 #'      \item{points}{Data frame with 3 variables used to plot the area of the estimated Pi}
 #' }
-#' @importFrom stats runif tidyverse ggplot2
+#' @importFrom stats runif
+#' @import tidyverse
 #' @export
 #' @examples
 #'estimate_pi()
@@ -66,18 +67,20 @@
   plot.pi <- function(x) {
 
     #extract the coordinates from the list
-      points <- x[["points"]]
+    points <- x[["points"]]
 
-      #plot
-      points %>%
-    ggplot2::ggplot(aes(x = x,y = y)) +
-    geom_point(color = ifelse(points$inside == 1,"steelblue1","firebrick")) +
-    annotate("path",
-             x=0+1*cos(seq(0,2*pi,length.out=100)),
-             y=0+1*sin(seq(0,2*pi,length.out=100))) +
-    geom_rect(aes(xmin = -1, xmax = 1, ymin = -1, ymax = 1), color = "black", fill = alpha("grey",0), linetype = 3) +
-    labs(title = "Plot of estimated PI Area", x = "x", y = "y")
-
+    #plot
+    points %>%
+      ggplot(aes(x = x, y = y, color = ifelse(points$inside == 1,"darkcyan","darkorange3"))) +
+      geom_point() +
+      annotate("path",
+               x=0+1*cos(seq(0,2*pi,length.out=100)),
+               y=0+1*sin(seq(0,2*pi,length.out=100))) +
+      geom_rect(aes(xmin = -1, xmax = 1, ymin = -1, ymax = 1), color = "black", fill = alpha("grey",0), linetype = 3) +
+      labs(title = "Plot of estimated PI Area", x = "x", y = "y", col = "") +
+      scale_color_manual(labels = c("Values inside Pi area", "Values outside of Pi area"), values = c("darkcyan", "darkorange3"))+
+      theme_bw()+
+      theme(legend.position = "bottom")
   }
 
 
