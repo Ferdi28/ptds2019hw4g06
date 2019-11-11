@@ -1,5 +1,4 @@
 
-devtools::document()
 #' @title Montecarlo estimation of Pi and its own Plot function
 #'
 #' @description Compute an approximation of Pi by Monte-Carlo integration using
@@ -12,8 +11,7 @@ devtools::document()
 #'      \item{estimated_pi}{Estimated value of Pi}
 #'      \item{points}{Data frame with 3 variables used to plot the area of the estimated Pi}
 #' }
-#' @authors Rebecca, Emily, Edvard, Ferdinando & Niels
-#' @importFrom stats runif tidyverse
+#' @importFrom stats runif tidyverse ggplot2
 #' @export
 #' @examples
 #'estimate_pi(B = 10^4, seed = 123)
@@ -72,7 +70,7 @@ devtools::document()
 
       #plot
       points %>%
-    ggplot(aes(x = x,y = y)) +
+    ggplot2::ggplot(aes(x = x,y = y)) +
     geom_point(color = ifelse(points$inside == 1,"steelblue1","firebrick")) +
     annotate("path",
              x=0+1*cos(seq(0,2*pi,length.out=100)),
