@@ -17,7 +17,7 @@
 #' @export
 #' @examples
 #'estimate_pi()
-#' plot(estimate_pi())
+#'plot(estimate_pi())
 
 
 #Problem 0: modify find_pi from Homework #3
