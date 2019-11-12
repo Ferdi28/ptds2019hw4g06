@@ -2,7 +2,11 @@ Package: ptds2019hw4g06
 Type: Package
 Title: Montecarlo estimation of Pi and its own Plot function
 Version: 0.1.0
-Author@R: c(person("Ferdinando", "Pepe", role = aut), person("Niels", "Saalfeldt"), person("Rebecca", "Silden"), person("Emily", "Trentmann"), person("Edvard", "Edding"))
+Author@R: c(person("Ferdinando", "Pepe", role = aut), 
+  person("Niels", "Saalfeldt"), 
+  person("Rebecca", "Silden"), 
+  person("Emily", "Trentmann"), 
+  person("Edvard", "Edding"))
 Maintainer: Ferdinando Pepe <Ferdinando.pepe@unil.ch>
 Description: Creates a Montecarlo estimation of Pi using a uniform distribution and plots the result
 License: GNU

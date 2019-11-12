@@ -2,6 +2,7 @@
 
 export(estimate_pi)
 import(dplyr)
+import(ggplot2)
 import(tidyverse)
 import(useful)
 importFrom(stats,runif)
