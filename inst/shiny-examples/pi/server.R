@@ -24,7 +24,6 @@ shinyServer(function(input, output) {
 
     output$pi <- renderText({
         # extract the estimated value
-
     })
 
 })
