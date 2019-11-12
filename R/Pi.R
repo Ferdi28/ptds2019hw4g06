@@ -63,7 +63,6 @@
 
   }
 
-
 ### Plot the result of estimate_pi
   plot.pi <- function(rval) {
 
@@ -72,7 +71,7 @@
 
     #plot
     points %>%
-      ggplot(aes(x = x, y = y, color = ifelse(points$inside == 1,"darkcyan","darkorange3"))) +
+      ggplot2::ggplot(aes(x = x, y = y, color = ifelse(points$inside == 1,"darkcyan","darkorange3"))) +
       geom_point() +
       annotate("path",
                x=0+1*cos(seq(0,2*pi,length.out=100)),
