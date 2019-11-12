@@ -12,7 +12,7 @@
 #'      \item{points}{Data frame with 3 variables used to plot the area of the estimated Pi}
 #' }
 #' @importFrom stats runif
-#' @import tidyverse
+#' @importFrom dplyr tibble
 #' @export
 #' @examples
 #'estimate_pi()
