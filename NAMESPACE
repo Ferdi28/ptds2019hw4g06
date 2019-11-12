@@ -3,4 +3,5 @@
 export(estimate_pi)
 import(dplyr)
 import(tidyverse)
+import(useful)
 importFrom(stats,runif)

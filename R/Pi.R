@@ -14,6 +14,7 @@
 #' @importFrom stats runif
 #' @import tidyverse
 #' @import dplyr
+#' @import useful
 #' @export
 #' @examples
 #'estimate_pi()
