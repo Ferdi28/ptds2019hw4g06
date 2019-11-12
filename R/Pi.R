@@ -1,6 +1,5 @@
 
 #' @title Montecarlo estimation of Pi and its own Plot function
-#'
 #' @description Compute an approximation of Pi by Monte-Carlo integration using
 #' uniform sampling and Plot its result
 #' @param B A  \code{numeric} (integer) used to denote the number of simulations.
@@ -18,7 +17,7 @@
 #' @export
 #' @examples
 #'estimate_pi()
-#' plot(estimate_pi())
+#'plot(estimate_pi())
 
 
 #Problem 0: modify find_pi from Homework #3
@@ -64,7 +63,6 @@
 
   }
 
-
 ### Plot the result of estimate_pi
   plot.pi <- function(rval) {
 
@@ -73,7 +71,7 @@
 
     #plot
     points %>%
-      ggplot(aes(x = x, y = y, color = ifelse(points$inside == 1,"darkcyan","darkorange3"))) +
+      ggplot2::ggplot(aes(x = x, y = y, color = ifelse(points$inside == 1,"darkcyan","darkorange3"))) +
       geom_point() +
       annotate("path",
                x=0+1*cos(seq(0,2*pi,length.out=100)),
@@ -84,5 +82,4 @@
       theme_bw() +
       theme(legend.position = "bottom")
   }
-
 
