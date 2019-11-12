@@ -8,7 +8,12 @@ Description: Creates a Montecarlo estimation of Pi using a uniform distribution 
 License: GNU
 Encoding: UTF-8
 LazyData: true
-Imports: Rcpp, shiny(>= 1.4.0)
+Imports: 
+  Rcpp,
+  shiny(>= 1.4.0),
+  tidyverse,
+  dplyr, 
+  ggplot2,  
+  useful 
 RoxygenNote: 6.1.1
-Suggests: ggplot2
 Depends: R(>= 3.6.0)

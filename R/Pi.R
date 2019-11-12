@@ -1,6 +1,5 @@
 
 #' @title Montecarlo estimation of Pi and its own Plot function
-#'
 #' @description Compute an approximation of Pi by Monte-Carlo integration using
 #' uniform sampling and Plot its result
 #' @param B A  \code{numeric} (integer) used to denote the number of simulations.
@@ -84,5 +83,4 @@
       theme_bw() +
       theme(legend.position = "bottom")
   }
-
 
