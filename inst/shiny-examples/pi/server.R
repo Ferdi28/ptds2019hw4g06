@@ -1,5 +1,5 @@
 library(shiny)
-library(ptds2019hw4g06) # REPLACE N BY YOUR GROUP NUMBER AND DELETE THIS COMMENT
+library(ptds2019hw4g06)
 
 shinyServer(function(input, output) {
 
