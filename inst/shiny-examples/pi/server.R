@@ -20,13 +20,14 @@ shinyServer(function(input, output) {
 
     output$time <- renderText({
         # extract the time of the execution
-        print(system.time(ptds2019hw4g06::estimate_pi(input$B, input$seed)))
+        paste("Elapsed time: ", system.time(ptds2019hw4g06::estimate_pi(input$B, input$seed))["elapsed"])
     })
 
     output$pi <- renderText({
         # extract the estimated value
         pi <- estimate_pi()
-        pi <- pi[["estimated_pi"]]
+        paste("Value of Estimated Pi :",
+              pi[["estimated_pi"]])
     })
 
 })
