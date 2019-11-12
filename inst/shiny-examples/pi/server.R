@@ -1,16 +1,16 @@
 library(shiny)
 library(ptds2019hw4g06)
 library(tidyverse)
+library(lubridate)
 
 shinyServer(function(input, output) {
 
     simulate <- reactive({
         # simulate pi and measure the time here
-        start_time <- Sys.time()
         ptds2019hw4g06::estimate_pi(input$B, input$seed)
-        end_time <- Sys.time()
 
-        time <- end_time - start_time
+        system.time(ptds2019hw4g06::estimate_pi(input$B, input$seed))
+
     })
 
     output$plot <- renderPlot({
@@ -20,13 +20,13 @@ shinyServer(function(input, output) {
 
     output$time <- renderText({
         # extract the time of the execution
-        print(time)
+        print(system.time(ptds2019hw4g06::estimate_pi(input$B, input$seed)))
     })
 
     output$pi <- renderText({
         # extract the estimated value
-        estimate_pi(B = input$B, seed = input$seed)
-
+        pi <- estimate_pi()
+        pi <- pi[["estimated_pi"]]
     })
 
 })
