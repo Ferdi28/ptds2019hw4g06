@@ -65,10 +65,10 @@
 
 
 ### Plot the result of estimate_pi
-  plot.pi <- function(x) {
+  plot.pi <- function(rval) {
 
     #extract the coordinates from the list
-    points <- x[["points"]]
+    points <- rval[["points"]]
 
     #plot
     points %>%
@@ -79,8 +79,8 @@
                y=0+1*sin(seq(0,2*pi,length.out=100))) +
       geom_rect(aes(xmin = -1, xmax = 1, ymin = -1, ymax = 1), color = "black", fill = alpha("grey",0), linetype = 3) +
       labs(title = "Plot of estimated PI Area", x = "x", y = "y", col = "") +
-      scale_color_manual(labels = c("Values inside Pi area", "Values outside of Pi area"), values = c("darkcyan", "darkorange3"))+
-      theme_bw()+
+      scale_color_manual(labels = c("Values inside Pi area", "Values outside of Pi area"), values = c("darkcyan", "darkorange3")) +
+      theme_bw() +
       theme(legend.position = "bottom")
   }
 
