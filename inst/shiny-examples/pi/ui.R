@@ -8,11 +8,11 @@ shinyUI(fluidPage(
 
         sidebarPanel(
 
-            selectInput("method", ...),
+            selectInput("method", label = "estimate pi", choices = c("estimate_pi()","find_pi") ),
 
-            numericInput("seed", ...),
+            numericInput("seed", label = "Choose a numerical value", value = 10),
 
-            sliderInput("B", ...)
+            sliderInput("B", label = "Choose a number between 1 and 1000000", min = 1, max = 1000000, value = 5000)
 
         ),
 
