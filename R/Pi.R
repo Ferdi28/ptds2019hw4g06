@@ -14,6 +14,7 @@
 #' @import tidyverse
 #' @import dplyr
 #' @import useful
+#' @import ggplot2
 #' @export
 #' @examples
 #'estimate_pi()
@@ -64,10 +65,10 @@
   }
 
 ### Plot the result of estimate_pi
-  plot.pi <- function(rval) {
+  plot.pi <- function(x) {
 
     #extract the coordinates from the list
-    points <- rval[["points"]]
+    points <- x[["points"]]
 
     #plot
     points %>%
