@@ -65,6 +65,7 @@
   }
 
 ### Plot the result of estimate_pi
+  #' @export
   plot.pi <- function(x) {
 
     #extract the coordinates from the list
