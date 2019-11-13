@@ -20,9 +20,9 @@ shinyUI(fluidPage(
 
             plotOutput("plot")),
 
-            verbatimTextOutput("time"),
+            verbatimTextOutput("pi"),
 
-            verbatimTextOutput("pi")
+            verbatimTextOutput("time")
         )
     )
 ))
