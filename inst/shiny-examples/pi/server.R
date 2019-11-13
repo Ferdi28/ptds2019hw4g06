@@ -16,7 +16,7 @@ shinyServer(function(input, output) {
     output$plot <- renderPlot({
         # plot pi
         ptds2019hw4g06:::plot.pi(estimate_pi(input$B, input$seed))
-    })
+    },width = 400, height = 400)
 
     output$time <- renderText({
         # extract the time of the execution
@@ -25,7 +25,7 @@ shinyServer(function(input, output) {
 
     output$pi <- renderText({
         # extract the estimated value
-        pi <- estimate_pi()
+        pi <- estimate_pi(B = input$B,seed = input$seed )
         paste("Value of Estimated Pi :",
               pi[["estimated_pi"]])
     })

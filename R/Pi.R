@@ -82,6 +82,6 @@
       labs(title = "Plot of estimated PI Area", x = "x", y = "y", col = "") +
       scale_color_manual(labels = c("Values inside Pi area", "Values outside of Pi area"), values = c("darkcyan", "darkorange3")) +
       theme_bw() +
-      theme(legend.position = "bottom")
+      theme(plot.title = element_text(hjust = 0.5),legend.position = "bottom")
   }
 

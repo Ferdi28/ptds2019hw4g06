@@ -16,9 +16,9 @@ shinyUI(fluidPage(
 
         ),
 
-        mainPanel(
+        mainPanel( fluidRow( align = "center",
 
-            plotOutput("plot"),
+            plotOutput("plot")),
 
             verbatimTextOutput("time"),
 
