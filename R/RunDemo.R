@@ -1,7 +1,6 @@
 #' @title Shiny Application of Montecarlo estimation of pi
 #' @description Run a shiny app for Montecarlo estimation of pi
 #' @import shiny
-#' @import ptds2019hw4g06
 #' @import tidyverse
 #' @import lubridate
 #'
