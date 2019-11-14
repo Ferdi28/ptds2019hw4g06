@@ -1,6 +1,6 @@
 library(shiny)
 
-shinyUI(fluidPage(
+shinyUI(fluidPage(theme = "bootstrap.css",
 
     titlePanel("Pi Estimation"),
 
@@ -16,9 +16,9 @@ shinyUI(fluidPage(
 
         ),
 
-        mainPanel( fluidRow( align = "center",
+        mainPanel(
 
-            plotOutput("plot")),
+            plotOutput("plot"),
 
             verbatimTextOutput("pi"),
 
