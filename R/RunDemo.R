@@ -3,7 +3,6 @@
 #' @import shiny
 #' @import tidyverse
 #' @import lubridate
-#'
 #' @export
 runDemo <- function() {
   appDir <- system.file("shiny-examples", "pi", package = "ptds2019hw4g06")
