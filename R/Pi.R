@@ -23,7 +23,7 @@
 
 #Problem 0: modify find_pi from Homework #3
 
-### (a) Estimate_pi function
+### (a) Estimate the Pi Function
 
   estimate_pi <- function(B = 5000, seed = 10) {
 
@@ -64,7 +64,7 @@
 
   }
 
-### (b) Plot the result of estimate_pi
+### (b) Plotted Result of the Estimated Pi
   #' @export
   plot.pi <- function(x) {
 
